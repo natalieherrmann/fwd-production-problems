@@ -1,8 +1,8 @@
 'use strict';
 function ringDoorbell() {
-  var doorbell = new Audio('media/doorbell.mp3');
-  doorbell.play();
+  var doorbell = new Audio("media/doorbell.mp3");
   var button = document.querySelector(".doorbell");
+  doorbell.play();
   button.classList.add("ringing");
   setTimeout(function(){ button.classList.remove("ringing"); }, 2000);
 }
@@ -10,7 +10,7 @@ function ringDoorbell() {
   if (typeof(document.querySelector)==="undefined") {
     return;
   }
-  document.querySelector('html').className = 'js';
+  document.querySelector('html').className = "js";
   document.addEventListener("DOMContentLoaded", function() {
     var button = document.createElement("a");
     var button_text = document.createTextNode("Ring the Doorbell");
