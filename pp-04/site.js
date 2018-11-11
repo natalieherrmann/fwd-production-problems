@@ -7,6 +7,7 @@ function ringDoorbell() {
   if (typeof(document.querySelector)==="undefined") {
     return;
   }
+  document.querySelector('html').className = 'js';
   document.addEventListener("DOMContentLoaded", function() {
     var button = document.createElement("a");
     var button_text = document.createTextNode("Ring the Doorbell");
