@@ -28,6 +28,9 @@ a:focus {
 
 
 /* ===== MODULAR STYLES ===== */
-
+.ringing {
+  border: double 0.5em red;
+  text-decoration: none;
+}
 
 /* ===== STATE STYLES ===== */
