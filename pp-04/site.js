@@ -16,5 +16,11 @@ function ringDoorbell() {
     button.appendChild(button_text);
     figureParent.replaceChild(button, figure);
     button.addEventListener("focus", ringDoorbell());
+    document.addEventListener("keydown", function(e) {
+      var keyName = e.key;
+      if (keyName === "d") {
+        ringDoorbell();
+      }
+    });
   });
 })();
