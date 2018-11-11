@@ -15,5 +15,6 @@ function ringDoorbell() {
     button.setAttribute("href", "");
     button.appendChild(button_text);
     figureParent.replaceChild(button, figure);
+    button.addEventListener("focus", ringDoorbell());
   });
 })();
