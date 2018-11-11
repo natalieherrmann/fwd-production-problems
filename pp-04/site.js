@@ -2,6 +2,9 @@
 function ringDoorbell() {
   var doorbell = new Audio('media/doorbell.mp3');
   doorbell.play();
+  var button = document.querySelector(".doorbell");
+  button.classList.add("ringing");
+  setTimeout(function(){ button.classList.remove("ringing"); }, 2000);
 }
 (function(){
   if (typeof(document.querySelector)==="undefined") {
@@ -15,6 +18,7 @@ function ringDoorbell() {
     var figureParent = figure.parentNode;
     button.setAttribute("href", "");
     button.appendChild(button_text);
+    button.className = "doorbell";
     figureParent.replaceChild(button, figure);
     button.addEventListener("focus", ringDoorbell());
     document.addEventListener("keydown", function(e) {
