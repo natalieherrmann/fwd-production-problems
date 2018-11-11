@@ -18,6 +18,12 @@ body {
   padding: 10%;
 }
 
+a:hover,
+a:focus {
+  background-color: #CDD2D2;
+  color: #A50D00;
+}
+
 /* ===== LAYOUT STYLES ===== */
 
 
