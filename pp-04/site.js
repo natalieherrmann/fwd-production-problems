@@ -16,11 +16,19 @@ function ringDoorbell() {
     var button_text = document.createTextNode("Ring the Doorbell");
     var figure = document.querySelector(".audio");
     var figureParent = figure.parentNode;
-    button.setAttribute("href", "");
+    button.setAttribute("href", "#");
     button.appendChild(button_text);
     button.className = "doorbell";
     figureParent.replaceChild(button, figure);
-    button.addEventListener("focus", ringDoorbell());
+    button.addEventListener("click", function() {
+      ringDoorbell();
+    });
+    button.addEventListener("keydown", function(e) {
+      var keyName = e.key;
+      if (keyName === "Enter") {
+        ringDoorbell();
+      }
+    });
     document.addEventListener("keydown", function(e) {
       var keyName = e.key;
       if (keyName === "d") {
