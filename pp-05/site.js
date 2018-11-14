@@ -3,14 +3,15 @@
 //  called:
 
 var x = 5;
+(function(){
+  function double(num) {
+    var x = num * 2;
+    return x;
+  }
 
-function double(num) {
-  var x = num * 2;
-  return x;
-}
-
-double(6);
-console.log('The value of x is:', x, 'It should be 5.');
+  double(6);
+  console.log('The value of x is:', x, 'It should be 5.');
+})();
 
 //  2. Rewrite the corrected JavaScript above as a self-executing
 //  anonymous function that does not pollute the global
