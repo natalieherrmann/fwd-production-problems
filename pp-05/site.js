@@ -37,6 +37,14 @@ console.log(i) // should be 'undefined', not 3
 //  variable x declared on line 5 above. Write your explanation
 //  as JavaScript comments.
 
+// The function addTwo() does not modify the global variable x
+// because it passes a parameter named 'x'
+// The function addTwo() modifies the passed variable 'x' instead
+// of the global variable x
+// If the parameter was named something else, such as 'num' in
+// double(), it would modify the global variable x as it is
+// currently written
+
 function addTwo(x) {
   x = x + 2;
   return x;
